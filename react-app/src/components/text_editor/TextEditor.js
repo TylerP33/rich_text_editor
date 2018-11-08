@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles/TextEditor.css'
-import {Editor, EditorState} from 'draft-js';
+import {Editor, EditorState, convertToRaw} from 'draft-js';
 
 export default class TextEditor extends Component {
 	constructor(props){
@@ -8,15 +8,15 @@ export default class TextEditor extends Component {
 		this.state = {
 			editorState: EditorState.createEmpty(),
 		}
-		this.onChange = (editorState) => this.setState({editorState});
-		this.logState = () => console.log(this.state.editorState.toJS());
-		this.setDomEditorRef = ref => this.domEditor = ref;
+		this.onChange = (editorState) => {
+			const contentState = editorState.getCurrentContent();
+			console.log(convertToRaw(contentState))
+			this.props.addDocument(JSON.stringify(convertToRaw(contentState)));
+			this.setState({
+				editorState
+			});
+		}
 	}
-
-	handleDataPersist = () => {
-		this.props.addDocument({editorState: this.state.editorState.toJS()})
-	}
-
 
 
 	render(){
@@ -30,11 +30,6 @@ export default class TextEditor extends Component {
 						ref={this.setDomEditorRef}
 					/>
 				</div>
-			 <input
-                onClick={this.logState}
-                type="button"
-                value="Log State"
-              />
            	</div>
 		)
 	}
