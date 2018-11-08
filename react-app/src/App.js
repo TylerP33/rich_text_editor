@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>hi</p>
+        <p contenteditable="true">hi</p>
       </div>
     );
   }
