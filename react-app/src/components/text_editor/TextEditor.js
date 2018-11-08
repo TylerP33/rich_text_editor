@@ -9,6 +9,12 @@ export default class TextEditor extends Component {
 			editorState: EditorState.createEmpty(),
 		}
 		this.onChange = (editorState) => this.setState({editorState});
+		this.logState = () => console.log(this.state.editorState.toJS());
+		this.setDomEditorRef = ref => this.domEditor = ref;
+	}
+
+	handleDataPersist = () => {
+		this.props.addDocument({editorState: this.state.editorState.toJS()})
 	}
 
 
@@ -16,8 +22,20 @@ export default class TextEditor extends Component {
 	render(){
 		return(
 			<div id="document-container">
-				<Editor editorState={this.state.editorState} onChange={this.onChange} />
-			</div>
+				<div >
+					<Editor 
+						editorState={this.state.editorState} 
+						onChange={this.onChange} 
+						placeholder="Let your story begin..."
+						ref={this.setDomEditorRef}
+					/>
+				</div>
+			 <input
+                onClick={this.logState}
+                type="button"
+                value="Log State"
+              />
+           	</div>
 		)
 	}
 }

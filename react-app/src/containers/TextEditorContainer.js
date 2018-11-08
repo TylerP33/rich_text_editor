@@ -5,8 +5,8 @@ import TextEditor from '../components/text_editor/TextEditor'
 export default class TextEditorContainer extends Component {
 	render(){
 		return(
-			<div id="text-editor-container-container">
-				<TextEditor />
+			<div id="text-editor-container">
+				<TextEditor addDocument={this.props.addDocument} />
 			</div>
 		)
 	}
