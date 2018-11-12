@@ -8,9 +8,5 @@ export default function manageDocuments(state = {
 			...state, 
 			records: [...state.records, record]
 		}
-
-		case "SAVE_RECORD"
-		const record = action.payload
-		return {...state, records: [...state.records, record]}
 	}
 };

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  resources :documents
-  resources :users
+  namespace :api do
+    namespace :v1 do
+      resources :users
+      resources :documents  
+    end
+  end
 end
