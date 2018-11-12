@@ -9,7 +9,7 @@ export function addRecords(record){
     body: JSON.stringify({document: document})
   }
   return (dispatch) => {
-    dispatch({type: 'ADDING_RECORD'});
+    dispatch({type: 'ADD_RECORD'});
     return fetch('http://localhost:3001/documents', request)
       .then(response => response.json())
       .then(recordsResp => {
