@@ -1,6 +1,23 @@
 import fetch from 'isomorphic-fetch';
-export function fetchRecords() {
 
+export function addRecords(record){
+  const req = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({document: document})
+  }
+  return (dispatch) => {
+    dispatch({type: 'ADDING_RECORD'});
+    return fetch('http://localhost:3001/documents', request)
+      .then(response => response.json())
+      .then(recordsResp => {
+        dispatch({ type: 'SAVE_RECORD', payload: recordsResp })});
+      }
+  }
+
+export function fetchRecords() {
   return function (dispatch) {
     dispatch({ type: 'LOADING_RECORDS' })
     return fetch('http://localhost:3001/records')
