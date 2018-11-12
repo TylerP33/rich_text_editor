@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles/TextEditor.css'
 import {Editor, EditorState, convertToRaw} from 'draft-js';
 
+
 export default class TextEditor extends Component {
 	constructor(props){
 		super(props);
@@ -9,9 +10,10 @@ export default class TextEditor extends Component {
 			editorState: EditorState.createEmpty(),
 		}
 		this.onChange = (editorState) => {
-			const contentState = editorState.getCurrentContent();
-			console.log(convertToRaw(contentState))
-			this.props.addDocument(JSON.stringify(convertToRaw(contentState)));
+			const contentState = this.state.editorState.getCurrentContent();
+			const editorStateJSONFormat = convertToRaw(contentState)
+			console.log(editorStateJSONFormat)
+			this.props.addRecord(editorStateJSONFormat)
 			this.setState({
 				editorState
 			});
@@ -26,7 +28,7 @@ export default class TextEditor extends Component {
 					<Editor 
 						editorState={this.state.editorState} 
 						onChange={this.onChange} 
-						placeholder="Let your story begin..."
+						placeholder="Type Below"
 						ref={this.setDomEditorRef}
 					/>
 				</div>

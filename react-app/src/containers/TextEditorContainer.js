@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
 import './styles/TextEditorContainer.css'
 import TextEditor from '../components/text_editor/TextEditor'
+import FontColor from '../components/text_editor/FontColor'
 import { connect } from 'react-redux'
 
 class TextEditorContainer extends Component {
 	render(){
 		return(
 			<div id="text-editor-container">
-				<TextEditor addDocument={this.props.addDocument} />
+				<TextEditor addRecord={this.props.addRecord} />
+				<FontColor editorState={this.props.editorState}  />
 			</div>
 		)
 	}
 }
 
+
+
+
+
 const mapDispatchToProps = dispatch => ({
-  addDocument: text => dispatch({ type: "ADD_DOCUMENT", text })
+  addRecord: text => dispatch({ type: "ADD_RECORD", text })
 })
 
 
