@@ -10,6 +10,7 @@ class DocumentsController < ApplicationController
     end
 
     private
-
-    params.require(:document).permit(:title, :body)
+    def docs_controller
+    	params.require(:document).permit(:title, :body)
+	end
 end
