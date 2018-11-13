@@ -48580,3 +48580,327 @@ Processing by Api::V1::DocumentsController#create as */*
 Completed 201 Created in 37ms (Views: 0.5ms | ActiveRecord: 4.4ms)
 
 
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:16:34 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/TylerP/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (3.0ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", ""], ["created_at", "2018-11-13 20:16:34.959323"], ["updated_at", "2018-11-13 20:16:34.959323"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 21ms (Views: 0.4ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:16:35 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (3.0ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", ""], ["created_at", "2018-11-13 20:16:35.046438"], ["updated_at", "2018-11-13 20:16:35.046438"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 22ms (Views: 0.5ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:16:36 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>"w"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (2.6ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "w"], ["created_at", "2018-11-13 20:16:36.015700"], ["updated_at", "2018-11-13 20:16:36.015700"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 16ms (Views: 0.4ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:16:54 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>"we"}}
+  [1m[35m (2.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (3.0ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "we"], ["created_at", "2018-11-13 20:16:54.313918"], ["updated_at", "2018-11-13 20:16:54.313918"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 37ms (Views: 0.6ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:17:01 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (3.0ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", ""], ["created_at", "2018-11-13 20:17:01.342993"], ["updated_at", "2018-11-13 20:17:01.342993"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 17ms (Views: 0.5ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:17:01 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (3.2ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", ""], ["created_at", "2018-11-13 20:17:01.738228"], ["updated_at", "2018-11-13 20:17:01.738228"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 25ms (Views: 0.5ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:17:23 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>"e"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (4.9ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "e"], ["created_at", "2018-11-13 20:17:23.694677"], ["updated_at", "2018-11-13 20:17:23.694677"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 39ms (Views: 0.4ms | ActiveRecord: 11.1ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:17:26 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (3.3ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", ""], ["created_at", "2018-11-13 20:17:26.793735"], ["updated_at", "2018-11-13 20:17:26.793735"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 22ms (Views: 0.5ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:17:27 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (3.9ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", ""], ["created_at", "2018-11-13 20:17:27.130929"], ["updated_at", "2018-11-13 20:17:27.130929"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 21ms (Views: 0.5ms | ActiveRecord: 7.3ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:17:28 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>"e"}}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (3.6ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "e"], ["created_at", "2018-11-13 20:17:28.036307"], ["updated_at", "2018-11-13 20:17:28.036307"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 24ms (Views: 0.6ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:17:31 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>"er"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (2.6ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "er"], ["created_at", "2018-11-13 20:17:31.630351"], ["updated_at", "2018-11-13 20:17:31.630351"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 25ms (Views: 0.7ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:17:32 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>"err"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (5.2ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "err"], ["created_at", "2018-11-13 20:17:32.252202"], ["updated_at", "2018-11-13 20:17:32.252202"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 31ms (Views: 0.4ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:17:33 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>"erre"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (2.9ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "erre"], ["created_at", "2018-11-13 20:17:33.800306"], ["updated_at", "2018-11-13 20:17:33.800306"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 31ms (Views: 0.6ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:17:49 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>"erree"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (7.2ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "erree"], ["created_at", "2018-11-13 20:17:49.374754"], ["updated_at", "2018-11-13 20:17:49.374754"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 33ms (Views: 0.4ms | ActiveRecord: 10.8ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:18:52 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/TylerP/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (3.2ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", ""], ["created_at", "2018-11-13 20:18:52.969371"], ["updated_at", "2018-11-13 20:18:52.969371"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 23ms (Views: 0.5ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:18:53 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (5.3ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", ""], ["created_at", "2018-11-13 20:18:53.204017"], ["updated_at", "2018-11-13 20:18:53.204017"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 21ms (Views: 0.4ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:18:53 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>"e"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (2.9ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "e"], ["created_at", "2018-11-13 20:18:53.812339"], ["updated_at", "2018-11-13 20:18:53.812339"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 29ms (Views: 0.4ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:18:54 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>"er"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (5.6ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "er"], ["created_at", "2018-11-13 20:18:54.265929"], ["updated_at", "2018-11-13 20:18:54.265929"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 48ms (Views: 0.6ms | ActiveRecord: 10.0ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:18:54 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>"erw"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (3.1ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "erw"], ["created_at", "2018-11-13 20:18:54.523553"], ["updated_at", "2018-11-13 20:18:54.523553"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 32ms (Views: 0.4ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/api/v1/documents" for ::1 at 2018-11-13 14:18:57 -0600
+Processing by Api::V1::DocumentsController#create as */*
+  Parameters: {"document"=>{"body"=>"erwr"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[36mDocument Create (2.4ms)[0m  [1m[32mINSERT INTO "documents" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "erwr"], ["created_at", "2018-11-13 20:18:57.736771"], ["updated_at", "2018-11-13 20:18:57.736771"]]
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/documents_controller.rb:11
+Completed 201 Created in 15ms (Views: 0.5ms | ActiveRecord: 5.7ms)
+
+
