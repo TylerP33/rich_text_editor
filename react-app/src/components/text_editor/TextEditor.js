@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './styles/TextEditor.css'
 import {Editor, EditorState, convertToRaw} from 'draft-js';
-import axios from 'axios'
-
 
 export default class TextEditor extends Component {
 	constructor(props){
@@ -20,6 +18,7 @@ export default class TextEditor extends Component {
 			});
 		}
 	}
+
 	render(){
 		return(
 			<div id="document-container">
