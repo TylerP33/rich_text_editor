@@ -7,12 +7,16 @@ module Api::V1
 
         def create
     	   @document = Document.create(doc_params)
-    	   render json: @document
+
+           if @document.save
+                render json: @document, status: :created
+            else
+                render json: @document.errors, status: :unprocessable_entity
         end
 
     private
         def docs_controller
-    	   params.require(:document).permit(:title, :body)
+    	   params.require(:document).permit(:title, :body, :user_id)
 	   end
     end
 end
