@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import './styles/TextEditor.css'
-import {Editor, EditorState, convertToRaw} from 'draft-js';
+import './styles/TextEditor.css';
+import { Editor, EditorState, convertToRaw} from 'draft-js';
+import { connect } from 'react-redux';
+import { addNewRecord } from '../../actions/recordActions';
 
-export default class TextEditor extends Component {
+class TextEditor extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
@@ -11,8 +13,7 @@ export default class TextEditor extends Component {
 		this.onChange = (editorState) => {
 			const contentState = this.state.editorState.getCurrentContent();
 			const editorStateJSONFormat = convertToRaw(contentState)
-			console.log(editorStateJSONFormat)
-			this.props.addRecord(editorStateJSONFormat)
+			this.props.addNewRecord(editorStateJSONFormat)
 			this.setState({
 				editorState
 			});
@@ -34,3 +35,5 @@ export default class TextEditor extends Component {
 		)
 	}
 }
+
+export default connect(null, { addNewRecord })(TextEditor)
