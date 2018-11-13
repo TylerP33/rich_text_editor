@@ -10,12 +10,12 @@ export default function manageDocuments(state = {loading: false,
 			displayedRecord: record
 		})
 
-		case "LOADING_RECORD"
+		case "LOADING_RECORD":
 			return {...state, loading: true}
-		case "GET_RECORD"
-			return {loading: false, records: action.records}
+		case "GET_RECORD":
+			return {loading: false, ...state, records: action.records}
 
 		default:
-        return state
+        	return state
 	}
 };

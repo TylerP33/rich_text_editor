@@ -25,3 +25,15 @@ export function addNewRecord(record) {
 		});
 	}
 }
+
+export function getRecord(record) {
+	return (dispatch) => {
+		dispatch({type: 'LOADING_RECORD'});
+		return fetch('http://localhost:3001/api/v1/documents')
+			.then(response => response.json())
+			.then(recordsResponse => {
+				dispatch({type: 'GET_RECORD', records: recordsResponse})
+		})
+	}
+}
+
