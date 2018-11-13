@@ -12,11 +12,12 @@ module Api::V1
                 render json: @document, status: :created
             else
                 render json: @document.errors, status: :unprocessable_entity
+            end
         end
 
     private
-        def docs_controller
-    	   params.require(:document).permit(:title, :body, :user_id)
+        def doc_params
+    	   params.require(:document).permit(:body)
 	   end
     end
 end

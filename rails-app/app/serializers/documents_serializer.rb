@@ -1,4 +1,4 @@
 class DocumentsSerializer < ActiveModel::Serializer
-  attributes :id, :body, :title
+  attributes :body
   belongs_to :user
 end

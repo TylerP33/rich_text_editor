@@ -9,7 +9,11 @@ export function addNewRecord(record) {
 		headers: {
 			'Content-Type': 'application/json'
 		},
-		body: text.join(" "),
+			body: JSON.stringify({document:
+			{
+				body: text.join(" "),
+			}
+		})
 	}
 
 	return (dispatch) => {
