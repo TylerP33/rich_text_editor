@@ -1,5 +1,8 @@
 #saved-documents-container{
 	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 	flex-direction: row;
 	flex-wrap: wrap;
 	width: 50%;

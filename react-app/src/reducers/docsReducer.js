@@ -1,11 +1,10 @@
 export default function manageDocuments(state = {loading: false,
-	records: [],
 }, action) {
 	switch(action.type) {
 		case 'PUSHING_RECORD':
 			return {...state, loading: true}
 		case "ADD_RECORD":
-		const record = action.text;
+		const record = action.payload;
 		state = Object.assign({}, state, {
 			displayedRecord: record
 		})
@@ -13,7 +12,7 @@ export default function manageDocuments(state = {loading: false,
 		case "LOADING_RECORD":
 			return {...state, loading: true}
 		case "GET_RECORD":
-			return {loading: false, ...state, records: action.records}
+			return {loading: false, ...state, records: action.payload}
 
 		default:
         	return state

@@ -11,6 +11,7 @@ class TextEditor extends Component {
 		this.state = {
 			editorState: EditorState.createEmpty(),
 		}
+
 		this.onChange = (editorState) => {
 			const contentState = this.state.editorState.getCurrentContent();
 			const editorStateJSONFormat = convertToRaw(contentState)
@@ -19,6 +20,7 @@ class TextEditor extends Component {
 				editorState
 			});
 		}
+		
 	}
 
 	render(){
@@ -36,5 +38,6 @@ class TextEditor extends Component {
 		)
 	}
 }
+
 
 export default connect(null, { addNewRecord })(TextEditor)

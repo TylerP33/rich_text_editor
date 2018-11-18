@@ -7,17 +7,31 @@ import {convertFromRaw} from 'draft-js';
 
 class SavedDocuments extends Component {
 
+		constructor(props){
+		super(props);
+		this.state = {
+			editorState: EditorState.createEmpty(),
+		}
+
+		this.onChange = (editorState) => {
+			const contentState = this.state.editorState.getCurrentContent();
+			const editorStateJSONFormat = convertToRaw(contentState)
+			this.props.addNewRecord(editorStateJSONFormat)
+			this.setState({
+				editorState
+			});
+		}
+		
+	}
+
 	 componentDidMount() {
     	this.props.getRecord()
   	}
 
 	render(){
-		const lastRecord = this.props.records
-		console.log(lastRecord)
-
 		return(
-			<div>
-				{}
+			<div id="saved-documents-container">
+				
 			</div>
 			)
 	}
