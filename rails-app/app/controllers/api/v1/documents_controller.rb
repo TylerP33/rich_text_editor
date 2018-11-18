@@ -17,7 +17,7 @@ module Api::V1
 
     private
         def doc_params
-    	   params.require(:document).permit(:body)
+    	   params.require(:document).permit(body: {})
 	   end
     end
 end

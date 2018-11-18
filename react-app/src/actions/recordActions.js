@@ -1,19 +1,12 @@
 import fetch from 'isomorphic-fetch';
 
-export function addNewRecord(record) {
-	const text = record.blocks.map(function(block){
-		return block.text
-	})
+export function addNewRecord(editorStateJSONFormat) {
 	const request = {
 		method: 'POST',
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json', "Accepts": "application/json"
 		},
-			body: JSON.stringify({document:
-			{
-				body: text.join(" "),
-			}
-		})
+		body: JSON.stringify({body: editorStateJSONFormat})
 	}
 
 	return (dispatch) => {
@@ -32,7 +25,7 @@ export function getRecord(record) {
 		return fetch('http://localhost:3001/api/v1/documents')
 			.then(response => response.json())
 			.then(recordsResponse => {
-				dispatch({type: 'GET_RECORD', records: recordsResponse})
+				dispatch({type: 'GET_RECORD', payload: recordsResponse})
 		})
 	}
 }
