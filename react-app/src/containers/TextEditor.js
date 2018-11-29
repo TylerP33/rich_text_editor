@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './styles/TextEditor.css';
-import { Editor, EditorState, convertToRaw, convertFromRaw, ContentState} from 'draft-js';
+import { Editor, EditorState, convertToRaw, convertFromRaw, RichUtils} from 'draft-js';
 import { connect } from 'react-redux';
 import { addNewRecord, getRecord } from '../actions/recordActions.js';
 import { bindActionCreators } from 'redux';
+import Bold from '../components/Bold.js'
 
 class TextEditor extends Component {
 	constructor(props){
@@ -11,18 +12,20 @@ class TextEditor extends Component {
 		this.state = {
 			editorState: EditorState.createEmpty()
 		}
+	}
 
 		
-			this.onChange = (editorState) => {
+		onChange = (editorState) => {
+				console.log(editorState)
 				const contentState = this.state.editorState.getCurrentContent();
 				const editorStateJSONFormat = convertToRaw(contentState)
 				this.props.addNewRecord(editorStateJSONFormat);
 				this.setState({
 					editorState
-				});
-			}
+			});
 		}
 
+		
 
 		componentDidMount = (props) => {
 			this.props.getRecord()
@@ -30,15 +33,17 @@ class TextEditor extends Component {
 
     	componentWillReceiveProps = (nextProps) => {
     		if (nextProps.records.length >= 1){
+    			
     			let lastRecord;
     			for (let i = nextProps.records.length; i > 0; i--){
     				if (i === nextProps.records.length - 1){
     					lastRecord = nextProps.records[i].body
-    					console.log(lastRecord)
     				}
     			}
+
     			const replaceRubyHashRocket = /=>/g
     			const content = lastRecord.replace(replaceRubyHashRocket, ":")
+  
 
     			this.setState({
     				editorState: EditorState.createWithContent(convertFromRaw(JSON.parse(content)))
@@ -47,10 +52,13 @@ class TextEditor extends Component {
     	}
 
 
+
+
 	render(){
 		return(
 			<div id="document-container">
-				<div >
+			<Bold onChange={this.onChange} {...this.state}  />
+				<div>
 					<Editor 
 						editorState={this.state.editorState} 
 						onChange={this.onChange} 
