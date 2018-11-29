@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { addNewRecord, getRecord } from '../actions/recordActions.js';
 import { bindActionCreators } from 'redux';
 import Bold from '../components/Bold.js'
+import Italics from '../components/Italics.js'
 
 class TextEditor extends Component {
 	constructor(props){
@@ -58,6 +59,7 @@ class TextEditor extends Component {
 		return(
 			<div id="document-container">
 			<Bold onChange={this.onChange} {...this.state}  />
+			<Italics onChange={this.onChange} {...this.state}  />
 				<div>
 					<Editor 
 						editorState={this.state.editorState} 

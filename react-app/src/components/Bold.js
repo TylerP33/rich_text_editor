@@ -10,7 +10,7 @@ class Bold extends Component {
 	render(){
 		return(
 			<div>
-			<button onClick={this.onBoldClick}>Bold</button>
+				<button onClick={this.onBoldClick}>Bold</button>
 			</div>
 			)
 	}
