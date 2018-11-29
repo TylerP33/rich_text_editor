@@ -1,8 +1,20 @@
-#document-container{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	border: solid black 1px;
-	width: 50%;
-	height: 35vw;
+.DraftEditor-root,
+.DraftEditor-editorContainer,
+.public-DraftEditor-content {
+  padding: 5px;
+  margin: 5px;
+}
+
+.public-DraftEditorPlaceholder-root {
+  margin-top: 28px;
+  margin-left: 25px;
+}
+
+.public-DraftEditorPlaceholder-inner {
+  background: rgba(0, 0, 0, .5);
+  color: white;
+}
+
+.DraftEditor-root {
+  border: 1px solid black;
 }

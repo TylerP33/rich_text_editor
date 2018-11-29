@@ -58,12 +58,11 @@ class TextEditor extends Component {
 	render(){
 		return(
 		<div>
+			<div>
 			<Bold onChange={this.onChange} {...this.state}  />
 			<Italics onChange={this.onChange} {...this.state}  />
 			<Underline onChange={this.onChange} {...this.state}  />
 			<Code onChange={this.onChange} {...this.state}  />
-		<div id="document-container">
-			<div>
 				<Editor 
 					editorState={this.state.editorState} 
 					onChange={this.onChange} 
@@ -71,8 +70,7 @@ class TextEditor extends Component {
 					ref={this.setDomEditorRef}
 					/>
 				</div>
-           	</div>
-        </div>
+		</div>
 		)
 	}
 }
