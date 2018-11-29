@@ -6,6 +6,8 @@ import { addNewRecord, getRecord } from '../actions/recordActions.js';
 import { bindActionCreators } from 'redux';
 import Bold from '../components/Bold.js'
 import Italics from '../components/Italics.js'
+import Underline from '../components/Underline.js'
+import Code from '../components/Code.js'
 
 class TextEditor extends Component {
 	constructor(props){
@@ -25,8 +27,6 @@ class TextEditor extends Component {
 					editorState
 			});
 		}
-
-		
 
 		componentDidMount = (props) => {
 			this.props.getRecord()
@@ -57,18 +57,22 @@ class TextEditor extends Component {
 
 	render(){
 		return(
-			<div id="document-container">
+		<div>
 			<Bold onChange={this.onChange} {...this.state}  />
 			<Italics onChange={this.onChange} {...this.state}  />
-				<div>
-					<Editor 
-						editorState={this.state.editorState} 
-						onChange={this.onChange} 
-						placeholder="Type Below"
-						ref={this.setDomEditorRef}
+			<Underline onChange={this.onChange} {...this.state}  />
+			<Code onChange={this.onChange} {...this.state}  />
+		<div id="document-container">
+			<div>
+				<Editor 
+					editorState={this.state.editorState} 
+					onChange={this.onChange} 
+					placeholder="Type Below"
+					ref={this.setDomEditorRef}
 					/>
 				</div>
            	</div>
+        </div>
 		)
 	}
 }
