@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Editor, EditorState, RichUtils} from 'draft-js';
+import './styles/Button.css';
 
 class Underline extends Component {
 
@@ -9,8 +10,8 @@ class Underline extends Component {
 
 	render(){
 		return(
-			<div>
-				<button onClick={this.onUnderLineClick}>Underline</button>
+			<div onClick={this.onUnderLineClick} className="button-container">
+				<i className="fa fa-underline"></i>
 			</div>
 			)
 	}
