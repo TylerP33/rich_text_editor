@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles/TextEditor.css';
-import { Editor, EditorState, convertToRaw, convertFromRaw, RichUtils} from 'draft-js';
+import { Editor, EditorState, convertToRaw, convertFromRaw} from 'draft-js';
 import { connect } from 'react-redux';
 import { addNewRecord, getRecord } from '../actions/recordActions.js';
 import { bindActionCreators } from 'redux';

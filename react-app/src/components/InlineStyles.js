@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Editor, EditorState, RichUtils} from 'draft-js';
+import {RichUtils} from 'draft-js';
 import './styles/InlineStyles.css';
 
 class InlineStyles extends Component {
