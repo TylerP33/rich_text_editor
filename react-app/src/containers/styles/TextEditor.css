@@ -1,6 +1,7 @@
 .DraftEditor-root,
 .DraftEditor-editorContainer,
 .public-DraftEditor-content {
+  display: flex;
   padding: 5px;
   margin: 5px;
 }
@@ -12,9 +13,22 @@
 
 .public-DraftEditorPlaceholder-inner {
   background: rgba(0, 0, 0, .5);
-  color: white;
+  font-size: 10px;
+  color: silver;
 }
 
 .DraftEditor-root {
+  background-color: silver;
+  color: black;
   border: 1px solid black;
+}
+
+.style-container{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	flex-wrap: nowrap;
+  border: solid black 1px;
+  background-color: teal;
+  border-radius: 10%;
 }

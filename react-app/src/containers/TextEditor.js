@@ -4,10 +4,8 @@ import { Editor, EditorState, convertToRaw, convertFromRaw, RichUtils} from 'dra
 import { connect } from 'react-redux';
 import { addNewRecord, getRecord } from '../actions/recordActions.js';
 import { bindActionCreators } from 'redux';
-import Bold from '../components/Bold.js'
-import Italics from '../components/Italics.js'
-import Underline from '../components/Underline.js'
-import Code from '../components/Code.js'
+import InlineStyles from '../components/InlineStyles.js'
+
 
 class TextEditor extends Component {
 	constructor(props){
@@ -59,10 +57,7 @@ class TextEditor extends Component {
 		return(
 		<div>
 			<div>
-			<Bold onChange={this.onChange} {...this.state}  />
-			<Italics onChange={this.onChange} {...this.state}  />
-			<Underline onChange={this.onChange} {...this.state}  />
-			<Code onChange={this.onChange} {...this.state}  />
+			<InlineStyles onChange={this.onChange} {...this.state}  />
 				<Editor 
 					editorState={this.state.editorState} 
 					onChange={this.onChange} 
