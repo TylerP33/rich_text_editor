@@ -7,11 +7,8 @@ import { userSearch } from '../actions/recordActions';
 
 
 class Analytics extends Component {
-	constructor(props){
-		super(props);
-		this.state = {
-			query: ''
-		}
+	state = {
+		query: ''
 	}
 
 	handleChange = e => {
@@ -19,6 +16,7 @@ class Analytics extends Component {
 	}
 
 	handleSubmit = e => {
+		alert(this.state.query);
 		e.preventDefault()
 		this.props.userSearch(this.state.query)
 		this.setState({ query: ''})
@@ -40,8 +38,8 @@ class Analytics extends Component {
                 onChange={this.handleChange}
               />
             </p>
+            <button type="submit" value="Submit">Search Text</button>
             </form>
-            <button type="submit">Search Text</button>
           </div>
 		)
 	}
