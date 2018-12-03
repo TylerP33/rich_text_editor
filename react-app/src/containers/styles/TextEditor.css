@@ -1,9 +1,12 @@
 .DraftEditor-root,
 .DraftEditor-editorContainer,
 .public-DraftEditor-content {
-  display: flex;
   padding: 5px;
   margin: 5px;
+  height: 40vw;
+   color: gold;
+  text-shadow: 0px 0px 0px #000;
+  -webkit-text-fill-color: transparent;
 }
 
 .public-DraftEditorPlaceholder-root {
@@ -13,14 +16,15 @@
 
 .public-DraftEditorPlaceholder-inner {
   background: rgba(0, 0, 0, .5);
-  font-size: 10px;
+  font-size: 15px;
   color: silver;
 }
 
 .DraftEditor-root {
   background-color: silver;
   color: black;
-  border: 1px solid black;
+  border: 4px solid black;
+  font-size: 30px;
 }
 
 .style-container{
@@ -29,6 +33,13 @@
 	flex-direction: row;
 	flex-wrap: nowrap;
   border: solid black 1px;
-  background-color: teal;
-  border-radius: 10%;
+  background-color: silver;
+  border-radius: 5%;
 }
+
+.editor-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

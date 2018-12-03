@@ -22,7 +22,23 @@
 	border-radius: 10%;
 }
 
+.color-container{
+	flex: 1;
+	justify-content: center;
+	text-align: center;
+	border: solid black 2px;
+	border-radius: 10%;
+}
+
 .code-container{
+	flex: 1;
+	justify-content: center;
+	text-align: center;
+	border: solid black 2px;
+	border-radius: 10%;
+}
+
+.superscript-container{
 	flex: 1;
 	justify-content: center;
 	text-align: center;
@@ -48,29 +64,30 @@ i{
 	font-size: 15px;
 }
 
-i:hover{
-	color: white;
-}
-
 .italic-container:hover{
-	background-color: silver;
+	background-color: white;
 	transition: 0.3s;
 }
 
 .bold-container:hover{
-	background-color: silver;
+	background-color: white;
 	transition: 0.3s;
 }
 
 
 .underline-container:hover{
-	background-color: silver;
+	background-color: white;
 	transition: 0.3s;
 }
 
 
 .code-container:hover{
-	background-color: silver;
+	background-color: white;
+	transition: 0.3s;
+}
+
+.code-container:hover{
+	background-color: white;
 	transition: 0.3s;
 }
 
