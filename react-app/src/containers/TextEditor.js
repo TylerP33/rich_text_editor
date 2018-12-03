@@ -4,7 +4,8 @@ import { Editor, EditorState, convertToRaw, convertFromRaw} from 'draft-js';
 import { connect } from 'react-redux';
 import { addNewRecord, getRecord } from '../actions/recordActions.js';
 import { bindActionCreators } from 'redux';
-import InlineStyles from '../components/InlineStyles.js'
+import InlineStyles from '../components/TextEditor/InlineStyles.js'
+import ColorPalette from '../components/TextEditor/ColorPalette.js'
 
 
 class TextEditor extends Component {
@@ -15,8 +16,7 @@ class TextEditor extends Component {
 		}
 	}
 
-		
-		onChange = (editorState) => {
+	onChange = (editorState) => {
 				console.log(editorState)
 				const contentState = this.state.editorState.getCurrentContent();
 				const editorStateJSONFormat = convertToRaw(contentState)
@@ -37,6 +37,7 @@ class TextEditor extends Component {
     			for (let i = nextProps.records.length; i > 0; i--){
     				if (i === nextProps.records.length - 1){
     					lastRecord = nextProps.records[i].body
+    					break
     				}
     			}
 
@@ -50,21 +51,21 @@ class TextEditor extends Component {
     		}
     	}
 
-
-
-
-	render(){
+    render(){
 		return(
 		<div>
 			<div>
-			<InlineStyles onChange={this.onChange} {...this.state}  />
-				<Editor 
-					editorState={this.state.editorState} 
-					onChange={this.onChange} 
-					placeholder="Type Below"
-					ref={this.setDomEditorRef}
-					/>
-				</div>
+				<ColorPalette onChange={this.onChange} {...this.state}  />
+				<InlineStyles onChange={this.onChange} {...this.state}  />
+				  <div id="editor-container">
+						<Editor 
+							editorState={this.state.editorState} 
+							onChange={this.onChange} 
+							placeholder="Type Here"
+							ref={this.setDomEditorRef}
+						/>
+				  </div>
+			</div>
 		</div>
 		)
 	}
