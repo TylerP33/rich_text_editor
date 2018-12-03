@@ -31,8 +31,7 @@ class Analytics extends Component {
     }
 		return(
 		<div>
-		<h2>See how many times you have typed a word in this text editor</h2>
-		<h3>Also, we will show you how many specific words exist in your current saved instance</h3>
+		<h2>Check to see how many times you have used a specifc word</h2>
           <form onSubmit={this.handleSubmit}>
             <p>
               <label>Word:</label>

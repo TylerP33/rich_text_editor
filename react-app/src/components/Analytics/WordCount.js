@@ -3,22 +3,22 @@ import {RichUtils} from 'draft-js';
 
 
 class WordCount extends Component {
+	state = {
+		counter: 0
+	}
+
+	componentWillMount(){
+		var query = this.props.query
+		const replaceRubyHashRocket = /=>/g
+		const searchRegex  = new RegExp('(\\b)(' + query + ')(\\b)','ig');
+    	const content = JSON.parse(this.props.records[this.props.records.length - 1].body.replace(replaceRubyHashRocket, ":")).blocks[0].text
+    	this.setState({counter: content.match(searchRegex).length})
+	}
 
 	render(){
-	var query = this.props.query
-	let counter = 0;
-		this.props.records.forEach(function(text){
-			const replaceRubyHashRocket = /=>/g
-			const searchRegex  = new RegExp('(\\b)(' + query + ')(\\b)','ig');
-    		const content = JSON.parse(text.body.replace(replaceRubyHashRocket, ":")).blocks[0].text
-    		if (content.match(searchRegex) !== null) {
-    			counter++
-    		}
-    	})
- 
 		return(
 			<div>
-				<p>{counter}</p>
+				<p>{this.state.counter}</p>
 			</div>
 			)
 	}
