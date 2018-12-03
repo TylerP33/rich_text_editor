@@ -5,6 +5,4 @@ Rails.application.routes.draw do
       resources :documents
     end
   end
-
-    get "/user_defined_search", to: "documents#used_defined_search", as: "documents/user_defined_search"
 end

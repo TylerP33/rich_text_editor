@@ -14,7 +14,6 @@ module Api::V1
                 render json: @document.errors, status: :unprocessable_entity
             end
         end
-
     private
         def doc_params
     	   params.require(:document).permit(body: {})

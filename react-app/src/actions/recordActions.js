@@ -29,24 +29,4 @@ export function getRecord() {
 		}
 }
 
-export function userSearch(query) {
-	const request = {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json; charset=utf-8', "Accepts": "application/json"
-		},
-		body: (query)
-	}
-
-	return (dispatch) => {
-		dispatch({type: 'LOADING_RECORD'});
-
-		return fetch(`http://localhost:3001/api/v1/documents/${request}`, request)
-			.then(response => response.json())
-			.then(records => dispatch({type: 'GET_USER_QUERY', payload: records}));
-		}
-}
-
-
-
 
