@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import {RichUtils} from 'draft-js';
-import './styles/InlineStyles.css';
+import '../styles/InlineStyles.css';
 
 class InlineStyles extends Component {
 
 	onCodeClick = (e) => {
 		if (e.currentTarget.classList.contains("bold-container")) {
 			this.props.onChange(RichUtils.toggleInlineStyle(this.props.editorState, 'BOLD'))
+
 		} else if (e.currentTarget.classList.contains("italic-container")) {
 			this.props.onChange(RichUtils.toggleInlineStyle(this.props.editorState, 'ITALIC'))
+
 		} else if (e.currentTarget.classList.contains("code-container")) {
 			this.props.onChange(RichUtils.toggleInlineStyle(this.props.editorState, 'CODE'))
+			
 		} else if (e.currentTarget.classList.contains("underline-container")) {
 			this.props.onChange(RichUtils.toggleInlineStyle(this.props.editorState, 'UNDERLINE'))
 		}
