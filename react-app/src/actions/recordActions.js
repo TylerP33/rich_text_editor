@@ -29,3 +29,14 @@ export function getRecord() {
 		}
 }
 
+export function userSearch() {
+	return (dispatch) => {
+		dispatch({type: 'LOADING_RECORD'});
+
+		return fetch('http://localhost:3001/api/v1/documents', {method: 'GET'})
+			.then(response => response.json())
+			.then(records => dispatch({type: 'GET_SEARCH_WORD', payload: records}));
+		}
+}
+
+

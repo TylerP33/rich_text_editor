@@ -1,3 +1,4 @@
 class Document < ApplicationRecord
 	
+	
 end
