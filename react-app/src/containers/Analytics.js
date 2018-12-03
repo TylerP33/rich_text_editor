@@ -2,30 +2,37 @@ import React, { Component } from 'react';
 import './styles/Analytics.css';
 import { connect } from 'react-redux';
 import { getRecord } from '../actions/recordActions.js';
-import { bindActionCreators } from 'redux';
-import { userSearch } from '../actions/recordActions';
+import WordCount from '../components/Analytics/WordCount'
 
 
 class Analytics extends Component {
 	state = {
-		query: ''
+		query: '',
+		loading: true
 	}
+
 
 	handleChange = e => {
 		this.setState({ query: e.target.value})
 	}
 
+	componentDidMount = (props) => {
+			this.props.getRecord()
+		}
+
 	handleSubmit = e => {
-		alert(this.state.query);
 		e.preventDefault()
-		this.props.userSearch(this.state.query)
-		this.setState({ query: ''})
+		this.setState({loading: false})
 	}
 
     render(){
+    if (this.state.loading !== true) {
+    	return <WordCount {...this.state}{...this.props}/>
+    }
 		return(
 		<div>
-		<h2>Check the statistics for a specific word!</h2>
+		<h2>See how many times you have typed a word in this text editor</h2>
+		<h3>Also, we will show you how many specific words exist in your current saved instance</h3>
           <form onSubmit={this.handleSubmit}>
             <p>
               <label>Word:</label>
@@ -45,6 +52,12 @@ class Analytics extends Component {
 	}
 }
 
+const mapStateToProps = (state) => {
+  return ({
+    records: state.allRecords.records
+  });
+};
 
 
-export default connect(null, {userSearch})(Analytics)
+
+export default connect(mapStateToProps, {getRecord})(Analytics)
