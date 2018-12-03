@@ -10,27 +10,33 @@ class Analytics extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			word: ''
+			query: ''
 		}
 	}
 
 	handleChange = e => {
-		const { word, value } = e.target
-		this.setState({ [word]: value })
+		this.setState({ query: e.target.value})
+	}
+
+	handleSubmit = e => {
+		e.preventDefault()
+		this.props.userSearch(this.state.query)
+		this.setState({ query: ''})
 	}
 
     render(){
 		return(
 		<div>
-		<h2>Check the Analytics for a specific word!</h2>
+		<h2>Check the statistics for a specific word!</h2>
           <form onSubmit={this.handleSubmit}>
             <p>
               <label>Word:</label>
               <input
                 type="text"
-                id="word"
-                word="word"
-                value={this.state.word}
+                id="query"
+                query="query"
+                value={this.state.query}
+                placeholder="Search for..."
                 onChange={this.handleChange}
               />
             </p>
@@ -41,11 +47,6 @@ class Analytics extends Component {
 	}
 }
 
-const mapStateToProps = (state) => {
-  return ({
-    records: state.allRecords.records
-  });
-};
 
 
-export default connect(mapStateToProps, {userSearch})(Analytics)
+export default connect(null, {userSearch})(Analytics)

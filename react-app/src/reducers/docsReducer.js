@@ -13,7 +13,7 @@ export default function manageDocuments(state = {loading: false,
 
 		case "LOADING_RECORD":
 			return {...state, loading: true}
-		case "GET_SEARCH_WORD":
+		case "GET_USER_QUERY":
 			return {loading: false, ...state, records: action.payload}
 
 		default:
