@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './styles/Analytics.css';
 import { connect } from 'react-redux';
 import { getRecord } from '../actions/recordActions.js';
-import WordCount from '../components/Analytics/WordCount'
+import WordCount from '../components/Analytics/WordToSentenceMatch'
 
 
 class Analytics extends Component {
@@ -22,7 +22,11 @@ class Analytics extends Component {
 
 	handleSubmit = e => {
 		e.preventDefault()
-		this.setState({loading: false})
+		if (this.state.query !== '') {
+			this.setState({loading: false})
+		} else{
+			alert("Please enter something!")
+		}
 	}
 
     render(){
@@ -30,22 +34,26 @@ class Analytics extends Component {
     	return <WordCount {...this.state}{...this.props}/>
     }
 		return(
-		<div>
-		<h2>Check to see how many times you have used a specifc word</h2>
-          <form onSubmit={this.handleSubmit}>
-            <p>
-              <label>Word:</label>
-              <input
-                type="text"
-                id="query"
-                query="query"
-                value={this.state.query}
-                placeholder="Search for..."
-                onChange={this.handleChange}
-              />
-            </p>
-            <button type="submit" value="Submit">Search Text</button>
-            </form>
+		<div id="form-container">
+		 <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="200" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" className="svgcolor-light">
+      		<path d="M0 0 L50 100 L100 0 Z" fill="#546a7b" stroke="#393d3f"></path>
+    	</svg>
+			<h2>Enter a word below to see what sentence it belongs to.</h2>
+			<div id="form">
+          		<form onSubmit={this.handleSubmit}>
+            		<p>
+              		<h2 id="form-label">Enter Word:</h2>
+              		<input
+                		type="text"
+                		id="query"
+                		query="query"
+                		value={this.state.query}
+                		onChange={this.handleChange}
+              		/>
+            		</p>
+            		<button type="submit" value="Submit">Search Text</button>
+            	</form>
+         	</div>
           </div>
 		)
 	}
