@@ -14,7 +14,8 @@ class WordToSentenceMatch extends Component {
 			const query = this.props.query
     		const content = JSON.parse(this.props.records[this.props.records.length - 1].body.replace(/=>/g, ":")).blocks[0].text
     		const matchingSentence = content.split(/[.?!]/).filter(function(n) {
-    			const regex = new RegExp(query)
+    			const regex = new RegExp(query, 'i')
+    			console.log(regex)
   				return regex.test(n)
 			});
     		this.setState({sentence: matchingSentence})
