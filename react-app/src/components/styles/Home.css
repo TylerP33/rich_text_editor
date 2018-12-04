@@ -1,0 +1,36 @@
+#home-container{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	font-family: 'Lora', serif;
+	flex-wrap: wrap;
+	background-color: #546a7b;
+	overflow-y: hidden;
+}
+
+h1{
+	width: 100%;
+	font-size: 3vw;
+	color: #393d3f;
+}
+
+#image-container{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	flex-wrap: wrap;
+	background-color: #fdfdff;;
+	border-top: solid #393d3f 30px;
+	border-top-right-radius: 90%;
+}
+
+#image{
+	height: 40vw;
+	width: 100%;
+	border: solid #c6c5b9 10px;
+	border-top-right-radius: 90%;
+}
