@@ -3,8 +3,8 @@
 .public-DraftEditor-content {
   padding: 5px;
   margin: 5px;
-  height: 40vw;
-   color: gold;
+  height: 100%;
+  color: #393d3f;
   text-shadow: 0px 0px 0px #000;
   -webkit-text-fill-color: transparent;
 }
@@ -16,15 +16,16 @@
 
 .public-DraftEditorPlaceholder-inner {
   background: rgba(0, 0, 0, .5);
-  font-size: 15px;
+  font-size: 10px;
   color: silver;
 }
 
 .DraftEditor-root {
-  background-color: silver;
-  color: black;
-  border: 4px solid black;
-  font-size: 30px;
+  background-color: #c6c5b9;
+  color: #393d3f;
+  font-size: 15px;
+  border: solid 4px #546a7b;
+  padding: 10px;
 }
 
 .style-container{
@@ -32,7 +33,7 @@
 	width: 100%;
 	flex-direction: row;
 	flex-wrap: nowrap;
-  border: solid black 1px;
+  border: solid #393d3f 4px;
   background-color: silver;
   border-radius: 5%;
 }
@@ -41,5 +42,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #393d3f;
+}
+
+#total-container{
+  height: 100%;
+  background-color: #393d3f;
 }
 

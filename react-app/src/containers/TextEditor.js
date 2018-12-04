@@ -53,9 +53,8 @@ class TextEditor extends Component {
 
     render(){
 		return(
-		<div>
+		<div id="total-container">
 			<div>
-				<ColorPalette onChange={this.onChange} {...this.state}  />
 				<InlineStyles onChange={this.onChange} {...this.state}  />
 				  <div id="editor-container">
 						<Editor 

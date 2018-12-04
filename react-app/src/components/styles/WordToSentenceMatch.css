@@ -1,0 +1,41 @@
+#sentence-container{
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	flex-wrap: none;
+	justify-content: center;
+	font-family: 'Lora', serif;
+	font: #393d3f;
+	background-color: #393d3f;
+}
+
+p {
+	font-weight: bold;
+}
+
+table{
+	background-color: #c6c5b9;
+	width: 80%;
+}
+
+td{
+	display: flex;
+	text-align: left;
+	justify-content: left;
+	padding: 20px;
+	border: solid #393d3f 2px;
+}
+
+#error{
+	font-size: 100px;
+	background-color: #fdfdff;
+}
+
+i {
+	color: #393d3f
+}
+
+#error-button-container{
+	display: flex;
+	justify-content: center;
+}

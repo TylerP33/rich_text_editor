@@ -2,7 +2,7 @@
 	flex: 1;
 	justify-content: center;
 	text-align: center;
-	border: solid black 2px;
+	border: solid #546a7b 2px;
 	border-radius: 10%;
 }
 
@@ -10,7 +10,7 @@
 	flex: 1;
 	justify-content: center;
 	text-align: center;
-	border: solid black 2px;
+	border: solid #546a7b 2px;
 	border-radius: 10%;
 }
 
@@ -18,7 +18,7 @@
 	flex: 1;
 	justify-content: center;
 	text-align: center;
-	border: solid black 2px;
+	border: solid #546a7b 2px;
 	border-radius: 10%;
 }
 
@@ -26,7 +26,7 @@
 	flex: 1;
 	justify-content: center;
 	text-align: center;
-	border: solid black 2px;
+	border: solid #546a7b 2px;
 	border-radius: 10%;
 }
 
@@ -34,7 +34,7 @@
 	flex: 1;
 	justify-content: center;
 	text-align: center;
-	border: solid black 2px;
+	border: solid #546a7b 2px;
 	border-radius: 10%;
 }
 
@@ -42,7 +42,7 @@
 	flex: 1;
 	justify-content: center;
 	text-align: center;
-	border: solid black 2px;
+	border: solid #546a7b 2px;
 	border-radius: 10%;
 }
 
@@ -51,43 +51,45 @@
 	width: 10%;
 	flex-direction: row;
 	padding: 5px;
- 	margin: 5px;
+	background-color: #c6c5b9;
+	border: solid 4px #546a7b;
 }
 
 .button{
 	width: 100%;
 	color: black;
-	background-color: silver;
+	background-color: #fdfdff;
 }
 
 i{
 	font-size: 15px;
+	color: #546a7b;
 }
 
 .italic-container:hover{
-	background-color: white;
+	background-color: #fdfdff;
 	transition: 0.3s;
 }
 
 .bold-container:hover{
-	background-color: white;
+	background-color: #fdfdff;
 	transition: 0.3s;
 }
 
 
 .underline-container:hover{
-	background-color: white;
+	background-color: #fdfdff;
 	transition: 0.3s;
 }
 
 
 .code-container:hover{
-	background-color: white;
+	background-color: #fdfdff;
 	transition: 0.3s;
 }
 
 .code-container:hover{
-	background-color: white;
+	background-color: #fdfdff;
 	transition: 0.3s;
 }
 
