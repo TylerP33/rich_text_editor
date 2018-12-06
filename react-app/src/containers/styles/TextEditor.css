@@ -28,16 +28,6 @@
   padding: 10px;
 }
 
-.style-container{
-	display: flex;
-	width: 100%;
-	flex-direction: row;
-	flex-wrap: nowrap;
-  border: solid #393d3f 4px;
-  background-color: silver;
-  border-radius: 5%;
-}
-
 .editor-container{
   display: flex;
   align-items: center;

@@ -12,6 +12,7 @@
 	text-align: center;
 	border: solid #546a7b 2px;
 	border-radius: 10%;
+	cursor: pointer;
 }
 
 .underline-container{
@@ -20,6 +21,7 @@
 	text-align: center;
 	border: solid #546a7b 2px;
 	border-radius: 10%;
+	cursor: pointer;
 }
 
 .color-container{
@@ -28,6 +30,7 @@
 	text-align: center;
 	border: solid #546a7b 2px;
 	border-radius: 10%;
+	cursor: pointer;
 }
 
 .code-container{
@@ -36,6 +39,7 @@
 	text-align: center;
 	border: solid #546a7b 2px;
 	border-radius: 10%;
+	cursor: pointer;
 }
 
 .superscript-container{

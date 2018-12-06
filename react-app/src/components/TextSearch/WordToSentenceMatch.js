@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import '../styles/WordToSentenceMatch.css';
 import {RichUtils} from 'draft-js';
-import ErrorMessage from '../Analytics/ErrorMessage'
+import ErrorMessage from '../TextSearch/ErrorMessage'
+import { NavLink } from 'react-router-dom';
 
 
 class WordToSentenceMatch extends Component {
@@ -10,10 +11,13 @@ class WordToSentenceMatch extends Component {
 	}
 
 	componentWillMount(){
-		if (this.props.records.length >= 1) {
-			let query = this.props.query
+		console.log(this.props.location.state.records)
+		console.log(this.props.location.state.query)
+		if (this.props.location.state.records.length >= 1) {
+			let records = this.props.location.state.records
+			let query = this.props.location.state.query
 			let text = []
-    		const content = JSON.parse(this.props.records[this.props.records.length - 1].body.replace(/=>/g, ":")).blocks.forEach(function(object){text.push(object.text)})
+    		const content = JSON.parse(records[records.length - 1].body.replace(/=>/g, ":")).blocks.forEach(function(object){text.push(object.text)})
     		const matchingSentence = text.join(" ").split(/[.?!]/).filter(function(n) {
     			const regex = new RegExp(query, 'i')
   				return regex.test(n)

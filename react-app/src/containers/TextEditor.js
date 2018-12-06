@@ -38,13 +38,11 @@ class TextEditor extends Component {
     				if (i === nextProps.records.length - 1){
     					lastRecord = nextProps.records[i].body
     					break
+
     				}
     			}
-
     			const replaceRubyHashRocket = /=>/g
     			const content = lastRecord.replace(replaceRubyHashRocket, ":")
-  
-
     			this.setState({
     				editorState: EditorState.createWithContent(convertFromRaw(JSON.parse(content)))
     			})
