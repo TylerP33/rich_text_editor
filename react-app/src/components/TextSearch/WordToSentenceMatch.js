@@ -11,8 +11,6 @@ class WordToSentenceMatch extends Component {
 	}
 
 	componentWillMount(){
-		console.log(this.props.location.state.records)
-		console.log(this.props.location.state.query)
 		if (this.props.location.state.records.length >= 1) {
 			let records = this.props.location.state.records
 			let query = this.props.location.state.query
