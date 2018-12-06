@@ -1,11 +1,10 @@
 #nav-container{
-	display: flex;
 	width: 100%;
+	padding-bottom: 5px;
 }
 
 a {
 	color: #fdfdff;
-	padding-bottom: 100px;
 	font-size: 30px;
 	padding-right: 20px;
 	text-decoration: none;
@@ -20,5 +19,4 @@ a:hover{
 
 #links-container{
 	padding: 10px;
-	border-bottom: 5px solid #c6c5b9;
 }

@@ -6,7 +6,7 @@ import { Redirect } from 'react-router'
 import WordToSentenceMatch from '../components/TextSearch/WordToSentenceMatch'
 
 
-class Analytics extends Component {
+class TextSearch extends Component {
 	state = {
 		query: '',
 		loading: true,
@@ -75,4 +75,4 @@ const mapStateToProps = (state) => {
 
 
 
-export default connect(mapStateToProps, {getRecord})(Analytics)
+export default connect(mapStateToProps, {getRecord})(TextSearch)
