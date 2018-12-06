@@ -7,7 +7,7 @@ const ErrorMessage = () => {
 	return <div>
 				<h2 id="error">Sorry, that word does not exist in your document!</h2>
 				<div id="error-button-container">
-					<button style={{border: 'solid 2px #fdfdff'}} type="submit" value="Submit"><NavLink to="/text_search">Return Back to Search</NavLink></button>
+					<button style={{border: 'solid 2px #fdfdff'}} type="submit" value="Submit"><NavLink id="error-link" to="/text_search">Return Back to Search</NavLink></button>
 				</div>
 			</div>
 }

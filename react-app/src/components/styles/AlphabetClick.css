@@ -1,0 +1,219 @@
+.fa-a:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'A';
+    font-size: 100px;
+}
+
+.fa-b:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'B';
+    font-size: 100px;
+}
+
+
+.fa-c:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'C';
+    font-size: 100px;
+}
+
+
+.fa-d:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'D';
+    font-size: 100px;
+}
+
+
+.fa-e:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'E';
+    font-size: 100px;
+}
+
+
+.fa-f:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'F';
+    font-size: 100px;
+}
+
+
+.fa-g:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'G';
+    font-size: 100px;
+}
+
+
+.fa-h:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'H';
+    font-size: 100px;
+}
+
+
+.fa-i:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'I';
+    font-size: 100px;
+}
+
+
+.fa-j:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'J';
+    font-size: 100px;
+}
+
+
+.fa-k:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'K';
+    font-size: 100px;
+}
+
+
+.fa-l:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'L';
+    font-size: 100px;
+}
+
+
+.fa-m:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'M';
+    font-size: 100px;
+}
+
+.fa-n:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'N';
+    font-size: 100px;
+}
+
+.fa-o:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'O';
+    font-size: 100px;
+}
+
+.fa-p:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'P';
+    font-size: 100px;
+}
+
+.fa-q:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'Q';
+    font-size: 100px;
+}
+
+.fa-r:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'R';
+    font-size: 100px;
+}
+
+.fa-s:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'S';
+    font-size: 100px;
+}
+
+.fa-t:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'T';
+    font-size: 100px;
+}
+
+.fa-u:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'U';
+    font-size: 100px;
+}
+
+.fa-v:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'V';
+    font-size: 100px;
+}
+
+.fa-w:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'W';
+    font-size: 100px;
+}
+
+.fa-x:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'X';
+    font-size: 100px;
+}
+
+.fa-y:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'Y';
+    font-size: 100px;
+}
+
+.fa-z:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'Z';
+    font-size: 100px;
+}
+
+
+#letter-container{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+#letter-span{
+	color: #c6c5b9;
+	border: solid 4px #546a7b;
+	padding: 10px;
+}
+
+.letter{
+	display: flex;
+	padding: 20px;
+}
+
+#letter-span:hover{
+	color: #546a7b;
+	background-color: #c6c5b9;
+	cursor: pointer;
+}

@@ -36,7 +36,18 @@ i {
 	color: #393d3f
 }
 
+#error-link{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	border: none;
+	color: #fdfdff;
+}
+
 #error-button-container{
 	display: flex;
 	justify-content: center;
+	text-align: center;
+	align-items: center;
 }

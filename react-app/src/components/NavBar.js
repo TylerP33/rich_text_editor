@@ -5,15 +5,26 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
 	return <div id="nav-container">
           <div id="links-container">
-            <NavLink to="/">
+            <div id="styles-container">
+            <NavLink class="nav-links" to="/">
        	      Home
             </NavLink>
-            <NavLink to="/editor">
+            </div>
+            <div id="styles-container">
+            <NavLink class="nav-links" to="/editor">
               Editor
             </NavLink>
-            <NavLink to="/text_search">
+            </div>
+            <div id="styles-container">
+            <NavLink class="nav-links" to="/text_search">
               Text Search
             </NavLink>
+            </div>
+            <div id="styles-container">
+            <NavLink class="nav-links" to="/first_letter">
+              First Letter
+            </NavLink>
+            </div>
         </div>
       </div>
 }
