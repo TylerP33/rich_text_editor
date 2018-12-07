@@ -10,18 +10,13 @@ class AlphabetClick extends Component {
 		words: ''
 	}
 
-	componentWillMount = () => {
-		console.log(this.state.words)
-	}
-
 	onClick = (e) => {
 		let loopArray = []
-		const currentLetter = e.currentTarget.classList[1][3]
+		let text = []
+		let currentLetter = e.currentTarget.classList[1][3]
 		if (e.currentTarget.classList.contains(`fa-${currentLetter}`)) {
-			const records = this.props.records
-			let text = []
-			const content = JSON.parse(records[records.length - 1].body.replace(/=>/g, ":")).blocks.forEach(function(object){text.push(object.text)})
-			const splitWords = text.join(" ").split(" ")
+			let content = JSON.parse(this.props.records[this.props.records.length - 1].body.replace(/=>/g, ":")).blocks.forEach(function(object){text.push(object.text)})
+			let splitWords = text.join(" ").split(" ")
 			for (let i = 0; i < splitWords.length; i++){
 				if (splitWords[i][0] === currentLetter) {
 					loopArray.push(splitWords[i])
