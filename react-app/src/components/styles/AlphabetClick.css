@@ -217,3 +217,20 @@
 	background-color: #c6c5b9;
 	cursor: pointer;
 }
+
+#returned-words{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border:solid #c6c5b9 4px;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    color:#c6c5b9;
+    padding: 25px;
+}
+
+#special-h1{
+    font-family: 'Lora', serif;
+    color: #546a7b;
+    font: bold;
+}
