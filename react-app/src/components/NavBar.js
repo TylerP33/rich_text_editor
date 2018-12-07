@@ -6,22 +6,22 @@ const NavBar = () => {
 	return <div id="nav-container">
           <div id="links-container">
             <div id="styles-container">
-            <NavLink class="nav-links" to="/">
+            <NavLink to="/">
        	      Home
             </NavLink>
             </div>
             <div id="styles-container">
-            <NavLink class="nav-links" to="/editor">
+            <NavLink to="/editor">
               Editor
             </NavLink>
             </div>
             <div id="styles-container">
-            <NavLink class="nav-links" to="/text_search">
+            <NavLink to="/text_search">
               Text Search
             </NavLink>
             </div>
             <div id="styles-container">
-            <NavLink class="nav-links" to="/first_letter">
+            <NavLink to="/first_letter">
               First Letter
             </NavLink>
             </div>

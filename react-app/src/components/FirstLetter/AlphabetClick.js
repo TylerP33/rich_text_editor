@@ -8,107 +8,121 @@ import { NavLink } from 'react-router-dom';
 class AlphabetClick extends Component {
 
 
+	onClick = (e) => {
+		const currentLetter = e.currentTarget.classList[1][3]
+		if (e.currentTarget.classList.contains(`fa-${currentLetter}`)) {
+			const records = this.props.records
+			let text = []
+			const content = JSON.parse(records[records.length - 1].body.replace(/=>/g, ":")).blocks.forEach(function(object){text.push(object.text)})
+			const splitArr = text.join(" ").split(" ")
+			for (let i = 0; i < splitArr.length; i++){
+				if (splitArr[i][0] === currentLetter) {
+					console.log(splitArr[i])
+				}
+			}
+		}
+	}
 
 	render(){
 	return(
 			<div id="letter-container">
-				<div onClick={this.onClick} class="letter">
-					<span id="letter-span" class="fa fa-a"></span><br/>
+				<div class="letter">
+					<span id="letter-span" onClick={this.onClick} class="fa fa-a"></span><br/>
 				</div>
 
 				<div class="letter">
-					<span id="letter-span"  class="fa fa-b"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-b"></span><br/>
 				</div>
 
 				<div class="letter">
-					<span id="letter-span" class="fa fa-c"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-c"></span><br/>
 				</div>
 
 				<div class="letter">
-					<span id="letter-span" class="fa fa-d"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-d"></span><br/>
 				</div>
 
 				<div class="letter">
-					<span id="letter-span" class="fa fa-e"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-e"></span><br/>
 				</div>
 
 				<div class="letter">
-					<span id="letter-span" class="fa fa-f"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-f"></span><br/>
 				</div>
 
 				<div class="letter">
-					<span id="letter-span" class="fa fa-g"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-g"></span><br/>
 				</div>
 
 				<div class="letter">
-					<span id="letter-span" class="fa fa-h"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-h"></span><br/>
 				</div>
 
 				<div class="letter">
-					<span id="letter-span" class="fa fa-i"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-i"></span><br/>
 				</div>
 
 				<div class="letter">
-					<span id="letter-span" class="fa fa-j"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-j"></span><br/>
 				</div>
 
 				<div class="letter">
-					<span id="letter-span" class="fa fa-k"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-k"></span><br/>
 				</div>
 
 				<div class="letter">
-					<span id="letter-span" class="fa fa-l"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-l"></span><br/>
 				</div>
 				<div class="letter">
-					<span id="letter-span" class="fa fa-m"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-m"></span><br/>
 				</div>
 				<div class="letter">
-					<span id="letter-span" class="fa fa-n"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-n"></span><br/>
 				</div>
 				<div class="letter">
-					<span id="letter-span" class="fa fa-o"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-o"></span><br/>
 				</div>
 					
 				<div class="letter">
-					<span id="letter-span" class="fa fa-p"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-p"></span><br/>
 				</div>
 					
 				<div class="letter">
-					<span id="letter-span" class="fa fa-q"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-q"></span><br/>
 				</div>
 					
 				<div class="letter">
-					<span id="letter-span" class="fa fa-r"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-r"></span><br/>
 				</div>
 					
 				<div class="letter">
-					<span id="letter-span" class="fa fa-s"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-s"></span><br/>
 				</div>
 					
 				<div class="letter"> 
-					<span id="letter-span" class="fa fa-t"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-t"></span><br/>
 				</div>
 					
 				<div class="letter">
-					<span id="letter-span" class="fa fa-u"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-u"></span><br/>
 				</div>
 					
 				<div class="letter">
-					<span id="letter-span" class="fa fa-v"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-v"></span><br/>
 				</div>
 					
 				<div class="letter">
-					<span id="letter-span" class="fa fa-w"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-w"></span><br/>
 				</div>
 					
 				<div class="letter">
-					<span id="letter-span" class="fa fa-x"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-x"></span><br/>
 				</div>
 				<div class="letter">
-					<span id="letter-span" class="fa fa-y"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-y"></span><br/>
 				</div>
 				<div class="letter">
-					<span id="letter-span" class="fa fa-z"></span><br/>
+					<span id="letter-span" onClick={this.onClick}  class="fa fa-z"></span><br/>
 				</div>
 			</div>
 			)

@@ -13,7 +13,6 @@ class FirstLetter extends Component {
   }
 
     render(){
-    console.log(this.props.records)
 		return(
 		    <div>
           <AlphabetClick {...this.props} />
