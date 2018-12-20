@@ -221,6 +221,8 @@
 #returned-words{
     display: flex;
     justify-content: center;
+    text-align: left;
+    flex-direction: column;
     width: 100%;
     border:solid #c6c5b9 4px;
     font-family: 'Lora', serif;
@@ -229,8 +231,28 @@
     padding: 25px;
 }
 
+li{
+    list-style: none;
+    padding-bottom: 10px;
+}
+
 #special-h1{
     font-family: 'Lora', serif;
     color: #546a7b;
     font: bold;
+}
+
+#special-counters{
+    border: solid #c6c5b9 4px;
+}
+
+#click-holder{
+    display: flex;
+    justify-content: center;
+    width: 5%;
+    border: solid #c6c5b9 4px
+}
+
+#special{
+    color: #c6c5b9;
 }
